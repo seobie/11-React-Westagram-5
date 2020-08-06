@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  text-shadow: none;
+  background: none;
+}
+
+@mixin moveCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin resetList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+$borderColor: rgb(219, 219, 219);
+
+$titleTextGray: #8e8e8e;
+
+$textBlack: #262626;
+
+$textBlue: #0095f6;
+
+$sideFooterGray: #c7c7c7;
+
+$textNavy: #00376b;
