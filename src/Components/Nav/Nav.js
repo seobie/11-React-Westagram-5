@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// import "./Main.scss";
+import "./Nav.scss";
 
-class NavBar extends Component {
+class Nav extends Component {
   render() {
     return (
-      <nav className="topNav">
+      <nav className="Nav">
         <div className="navContainer">
           <div class="navLogo">
             <img
@@ -68,7 +68,7 @@ class NavBar extends Component {
               </div>
               <div class="navProfile navBtn">
                 <img
-                  alt="Owner's profile picture"
+                  alt="Owner's profile pic"
                   draggable="false"
                   src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/30078382_606077686407278_6559547588033380352_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&amp;_nc_ohc=ypevyUSIvrMAX9PhSwQ&amp;oh=8a6fe8c60581cf85f4338bd49fd0edbb&amp;oe=5F48841A"
                 />
@@ -81,4 +81,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default Nav;
