@@ -1,0 +1,26 @@
+.Suggestion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .suggestedUserThumbnail {
+    border-radius: 50%;
+    width: 32px;
+    margin: 12px 12px 0 0;
+  }
+  .suggestedUserId {
+    font-size: 14px;
+  }
+  .suggestedUserInfo {
+    font-size: 12px;
+  }
+  .followSuggestions {
+    margin: 0 0 0 auto;
+    button {
+      color: #0095f6;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0;
+    }
+  }
+}

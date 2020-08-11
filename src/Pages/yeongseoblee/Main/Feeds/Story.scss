@@ -1,0 +1,85 @@
+.Story {
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+  background-color: white;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 16px 0;
+
+  .storyFrame {
+    position: relative;
+    height: 84px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    ul {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .epmtyItem {
+        width: 10px;
+      }
+
+      li {
+        position: relative;
+        width: 80px;
+        padding: 0 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  .storyItems {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 72px;
+    padding: 0 10px;
+  }
+
+  .unreadStory {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_2x_bcd90c1d4868.png/bcd90c1d4868.png");
+    background-position: -65px -223px;
+    background-size: 440px 411px;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+  }
+
+  .storyBtn {
+    padding: 0;
+  }
+
+  .storyBtn img {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgb(219, 219, 219);
+  }
+
+  .storyId {
+    position: relative;
+    top: 66px;
+    font-size: 12px;
+    max-width: 74px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
