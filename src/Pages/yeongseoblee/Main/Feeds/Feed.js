@@ -202,8 +202,8 @@ class Feed extends Component {
               </a>
             </div>
             <ul className="commentList">
-              {this.state.commentArray.map((el) => (
-                <CommentItem valueFromFeed={el.cmt} />
+              {this.state.commentArray.map((el, idx) => (
+                <CommentItem key={idx} valueFromFeed={el.cmt} />
               ))}
             </ul>
           </div>

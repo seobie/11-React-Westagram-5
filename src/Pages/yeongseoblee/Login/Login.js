@@ -65,7 +65,6 @@ class Login extends React.Component {
                       name="account"
                       babo="me"
                       placeholder="Phone number, username, or email"
-                      // value={this.state.account}
                     />
                     <input
                       className="passwordInput"
