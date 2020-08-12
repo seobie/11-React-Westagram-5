@@ -1,0 +1,67 @@
+.login-scene {
+  width: 350px;
+  height: 380px;
+  padding: 10px 0;
+  margin: 200px auto;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  background-color: white;
+}
+
+.logo-instagram {
+  width: 175px;
+  height: 51px;
+  margin: 22px 86.5px 12px auto;
+  background-image: url("/images/sangwookryu/logo_text.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-container {
+  width: 268px;
+  margin: 40px auto;
+}
+
+.login-id,
+.password {
+  width: 268px;
+  height: 36px;
+  padding: 9px 7px 8px;
+  margin: 3px auto;
+  font-size: 12px;
+  outline: none;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+}
+
+.login-button {
+  width: 268px;
+  height: 30px;
+  margin: 10px auto;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #0095f6;
+  border-radius: 3px;
+  background-color: #0095f6;
+}
+
+.login-button:disabled {
+  border: 1px solid #c0d7f3;
+  background-color: #c0d7f3;
+  cursor: default;
+}
+
+.forget-pw {
+  position: relative;
+  top: 40px;
+  text-align: center;
+
+  a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #00376b;
+  }
+}

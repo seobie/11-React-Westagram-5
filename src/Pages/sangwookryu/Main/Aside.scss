@@ -1,0 +1,83 @@
+.aside-box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: auto;
+    margin-left: 650px;
+    top: 90px;
+}
+
+.aside-head {
+    width: 293px;
+    height: 56px;
+    margin: 20px 0 0 -15px;
+}
+
+.aside-head .profile-icon {
+    width: 56px;
+    height: 56px;
+}
+
+.aside-contents {
+    width: 293px;
+    height: auto;
+}
+
+.recommend {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 -15px;
+}
+
+.user-profile {
+    display: flex;
+    padding: 8px 16px;
+
+    p {
+        line-height: 23px;
+        font-size: 12px;
+        color: #8e8e8e;
+    }
+}
+
+.profile-side {
+    text-indent: 10px;
+}
+
+.profile-id {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+    cursor: pointer;
+}
+
+.btn-follow {
+    font-size: 12px;
+    color: #0095f6;
+    margin: auto 5px auto auto;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aside-footer {
+    width: 290px;
+    padding: 15px 0 0 0;
+}
+
+.aside-footer ul,
+li {
+    display: inline;
+    font-size: 11px;
+    color: #c7c7c7;
+
+    li {
+        cursor: pointer;
+    }
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #c7c7c7;
+}
