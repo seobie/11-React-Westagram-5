@@ -1,0 +1,116 @@
+@import "../../Styles/common.scss";
+
+.Nav {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    background-color: white;
+
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        box-sizing: border-box;
+        max-width: 975px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .navLogoContainer {
+        min-width: 40px;
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .navLogo {
+        margin: 0 auto 0 0;
+
+        img {
+            margin-top: 10px;
+        }
+    }
+
+    .navSearch {
+        position: relative;
+        height: 28px;
+        width: 215px;
+        min-width: 125px;
+    }
+
+    .navSearch input {
+        width: 215px;
+        height: 26px;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+        padding: 3px 10px 3px 26px;
+        background-color: #fafafa;
+    }
+
+    .searchIcon {
+        position: absolute;
+        text-align: center;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+        background-color: #fafafa;
+        top: 0;
+        left: 0;
+        padding: 7px;
+        font-size: 14px;
+        font-weight: 300;
+        width: 100%;
+        height: 100%;
+
+        div {
+            position: relative;
+            left: -5px;
+            top: -1px;
+
+            .magImg {
+                display: inline-block;
+                background-image: url("/images/yeongseoblee/logos.png");
+                background-position: -428px -241px;
+                background-size: 440px 411px;
+                margin-right: 6px;
+                height: 10px;
+                width: 10px;
+                z-index: 2;
+            }
+
+            span {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: $titleTextGray;
+            }
+        }
+    }
+
+    .navBtnContainer {
+        margin: 0 0 0 auto;
+    }
+
+    .navBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 222px;
+        height: 22px;
+        padding-left: 2px;
+    }
+
+    .navBtn {
+        margin-left: 22px;
+    }
+
+    .navProfile img {
+        width: 22px;
+        border-radius: 50%;
+    }
+}

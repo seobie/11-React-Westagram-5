@@ -2,24 +2,24 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // 영섭's 컴포넌트
-import LoginSeob from "./pages/yeongseoblee/Login/Login";
-import MainSeob from "./pages/yeongseoblee/Main/Main";
+import LoginSeob from "./Pages/yeongseoblee/Login/Login";
+import MainSeob from "./Pages/yeongseoblee/Main/Main";
 
 // 상원's 컴포넌트
-import LoginSangWon from "./pages/sangwonma/Login/Login";
-import MainSangWon from "./pages/sangwonma/Main/Main";
+import LoginSangWon from "./Pages/sangwonma/Login/Login";
+import MainSangWon from "./Pages/sangwonma/Main/Main";
 
 // 상욱's 컴포넌트
-import LoginRyu from "./pages/sangwookryu/Login/Login";
-import MainRyu from "./pages/sangwookryu/Main/Main";
+import LoginRyu from "./Pages/sangwookryu/Login/Login";
+import MainRyu from "./Pages/sangwookryu/Main/Main";
 
 // 조은's 컴포넌트
-import LoginJoEun from "./pages/joeunlee/Login/Login";
-import MainJoEun from "./pages/joeunlee/Main/Main";
+import LoginJoEun from "./Pages/joeunlee/Login/Login";
+import MainJoEun from "./Pages/joeunlee/Main/Main";
 
 // 효정's 컴포넌트
-import LoginHyo from "./pages/hyojeunglee/Login/Login";
-import MainHyo from "./pages/hyojeunglee/Main/Main";
+import LoginHyo from "./Pages/hyojeunglee/Login/Login";
+import MainHyo from "./Pages/hyojeunglee/Main/Main";
 
 class Routes extends React.Component {
   render() {

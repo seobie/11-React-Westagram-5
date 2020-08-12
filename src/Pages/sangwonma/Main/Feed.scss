@@ -1,0 +1,107 @@
+    main {
+        position: relative;
+        top: 50px;
+        display: flex;
+        justify-content: center;
+
+        section {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin: 0 auto;
+            max-width: 935px;
+            height: 1499px;
+        }
+
+        .sectionBox {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+
+        .feedContainer {
+            width: 614px;
+            height: 614px;
+            border: 1px solid rgb(219, 219, 219);
+
+            .feedHeader {
+                width: 614px;
+                height: 64px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    margin: 0 auto;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                }
+            }
+
+            .innerImg {
+                margin-top: 30px;
+                position: absolute;
+                margin-left: 35px;
+                width: 12px;
+                height: 10px;
+                border: 1px solid white;
+                border-radius: 10px;
+                color: white;
+                background-color: red;
+            }
+
+            .innerImgText {
+                margin: 0 auto;
+                font-weight: bold;
+                padding: 5px;
+                width: 500px;
+                height: 10px;
+                font-size: 14px;
+            }
+
+            .innerLocation {
+                margin-left: 55px;
+                padding: 3px;
+                font-size: 14px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+        }
+
+        .feedImgBox {
+            position: relative;
+            width: 614px;
+            height: 614px;
+
+            img {
+                width: 614px;
+                height: 614px;
+                padding: 0;
+            }
+        }
+
+        .feedLikeImg {
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .lists {
+            margin-left: 5px;
+        }
+
+        textarea {
+            width: 450px;
+            height: 30px;
+            border: 0;
+            outline: none;
+            resize: none;
+        }
+
+        img {
+            width: 22px;
+            height: 22px;
+            padding: 5px;
+        }
+    }

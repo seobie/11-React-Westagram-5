@@ -1,0 +1,227 @@
+.mainWapper {
+
+    .sidebarBox {
+        margin-left: 20px;
+        position: sticky;
+        top: 50px;
+        width: 280px;
+        height: 736px;
+        list-style: none;
+    }
+
+    .sidebarBox li {
+        list-style: none;
+    }
+
+    .sidebarContant {
+        margin-left: 13px;
+        margin-top: 30px;
+        display: flex;
+    }
+
+    .sidebarContant img {
+        left: 12px;
+        width: 56px;
+        height: 56px;
+        border-radius: 40px;
+    }
+
+    .sidebarContantText {
+        padding: 16px;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: bold;
+    }
+
+    .followBox {
+        display: flex;
+        position: relative;
+        /* width: 280px; */
+    }
+
+    .followRcd {
+        list-style: none;
+        margin-top: 20px;
+        position: relative;
+        margin-left: 10px;
+        font-size: 14px;
+        width: 150px;
+        height: 20px;
+        font-weight: bold;
+        color: #8e8e8e;
+    }
+
+    .followRed {
+        position: absolute;
+        margin: 1px 0px 0px 5px;
+        top: 20px;
+        right: 0px;
+        width: 50px;
+        height: 14px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-left: 30px;
+        padding-left: px;
+        padding-right: 10px;
+    }
+
+    .followList {
+        padding-top: 8px;
+        list-style: none;
+    }
+
+    .followLists {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 4px 10px 0px 10px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600px;
+    }
+
+    .fallow_alignment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .followImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 30px;
+        margin-right: 13px;
+    }
+
+    .infoNickName {
+        width: 100px;
+        height: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 3px 0px 0px -5px;
+        padding: 0px 0px 0px 5px;
+    }
+
+    .infoFollowText {
+        width: 150px;
+        height: 10px;
+        margin: 1px 0 -3px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #8e8e8e;
+    }
+
+    .infoFollowBtn {
+        margin-top: 5px;
+        height: 15px;
+        right: 20px;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        color: rgb(0, 149, 246);
+        font-weight: 600;
+    }
+
+
+    .icon_heart,
+    .icon_share,
+    .icon_commit {
+        margin: 4px 0px 0px;
+        padding: 4px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .userNickName {
+        position: relative;
+        font-weight: 600;
+    }
+
+    .useNew {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .useNew span {
+        margin-left: px;
+        margin-right: 20px;
+    }
+
+    .useNew {
+        font-size: 16px;
+        padding: 0px 5px 0px 0px;
+        position: relative;
+    }
+
+    .likeImg img {
+        position: absolute;
+        right: 16px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .icon_heart_small {
+        position: absolute;
+        right: 12px;
+        padding: 4px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .inputComment {
+        font-size: 12px;
+        width: 100%;
+        max-height: 80px;
+        border: 0;
+        outline: 0;
+        resize: none;
+        background-color: rgb(250, 250, 250);
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+
+    .iconBookMark {
+        margin-left: 480px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .infoFoobar {
+        margin-top: 20px;
+        width: 280px;
+        height: 50px;
+        padding: 0;
+    }
+
+    .infoBarList {
+        padding: 1px;
+    }
+
+    .infoBarList1 {
+        display: flex;
+        padding: 5px;
+        font-size: 12px;
+        list-style: none;
+        color: #c7c7c7;
+        line-height: 13px;
+    }
+
+    .infoBarList2 {
+        display: flex;
+        padding: 5px;
+        list-style: none;
+        font-size: 12px;
+        color: #c7c7c7;
+        line-height: 13px;
+    }
+
+    .footer_copylight {
+        margin: 10px 0px 0px 10px;
+        font-size: 11px;
+        color: #c7c7c7;
+    }
+
+}
