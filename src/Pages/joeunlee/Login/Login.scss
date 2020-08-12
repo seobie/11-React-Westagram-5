@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250, 250, 250);
+}
+.Login{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+
+  .innerContainer {
+    width: 350px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 1px;
+    padding: 10px 0;
+    background-color: #ffffff;
+  }
+  
+  .siteName {
+    width: 175px;
+    height: 51px;
+    position: relative;
+    bottom: 30px;
+    margin: 10px 86.5px 12px;
+  }
+  
+  .loginPage {
+    .loginId input,
+    .loginPsw input {
+      width: 258px;
+      height: 36px;
+      line-height: 36px;
+      font: 400 13.3333px Arial;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 3px;
+      padding: 9px 8px 7px 8px;
+      margin: 0 0 6px;
+      background-color: rgb(250, 250, 250);
+    }
+    .loginId input:focus,
+    .loginPsw input:focus {
+      outline: 1px solid rgb(168, 168, 168);
+      box-shadow: 0 0 0 1px rgb(168, 168, 168);
+    }
+    .loginBtn button {
+      width: 258px;
+      height: 30px;
+      line-height: 18px;
+      text-align: center;
+      font: bold 14px inherit;
+      color: #ffffff;
+      border: 0;
+      border-radius: 4px;
+      margin: 8px 0;
+    }
+    .btnActive {
+      background-color: rgba(0, 149, 246, 1);
+    }
+    .btnDisabled {
+      background-color: rgba(0, 149, 246, .3);;
+    }
+  
+    .findPsw {
+      width: 348px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 12px;
+      color: rgb(0, 55, 107);
+      text-decoration: none;
+      position: relative;
+      top: 70px;
+    }
+    }
+}
