@@ -1,0 +1,167 @@
+.Aside {
+  width: 293px;
+
+  .profile {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .profileImg {
+      width: 56px;
+      height: 56px;
+      border-radius: 56px;
+      background-image: url(/images/hyojeunglee/my_profile.jpg);
+      background-size: cover;
+      margin-right: 15px;
+    }
+
+    .profileId {
+      font-size: 15px;
+      font-weight: 600;
+      color: #262626;
+      text-decoration: none;
+    }
+
+    .profileName {
+      font-size: 13px;
+      line-height: 21px;
+      color: #8e8e8e;
+    }
+  }
+
+  .storyBox {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 15px;
+
+    .storyBoxTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 15px 0px 15px;
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: -1px;
+
+      .storeyBoxTitle {
+        color: #8e8e8e;
+      }
+
+      li {
+        &:last-child {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .profile2 {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 5px 20px 15px;
+    position: relative;
+
+    .profileImg2 {
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      background-image: url(/images/hyojeunglee/profileimg_1.png);
+      background-size: cover;
+      margin-right: 15px;
+    }
+
+    .profileId2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #262626;
+      text-decoration: none;
+    }
+
+    .profileTime {
+      font-size: 13px;
+      line-height: 21px;
+      color: #8e8e8e;
+    }
+
+    .followText {
+      width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      line-height: 21px;
+      color: #8e8e8e;
+    }
+
+    .follow {
+      position: absolute;
+      right: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #0095f6;
+      cursor: pointer;
+    }
+  }
+
+  .issueBox {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 15px;
+
+    .issueBoxTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 15px 0px 15px;
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: -1px;
+
+      .issueBoxTitle {
+        color: #8e8e8e;
+      }
+
+      li {
+        &last-child {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .footerBox {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      font-size: 11px;
+      color: #c7c7c7;
+
+      li {
+        list-style: inside;
+        float: left;
+        margin-right: 5px;
+
+        &:first-child {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  span {
+    font-size: 11px;
+    color: #c7c7c7;
+    margin-top: 10px;
+  }
+}
