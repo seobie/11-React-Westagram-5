@@ -13,7 +13,6 @@
 
   .navContainer {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
@@ -54,17 +53,17 @@
 
   .searchIcon {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    padding: 7px;
     border: 1px solid $borderColor;
     border-radius: 3px;
     background-color: #fafafa;
-    top: 0;
-    left: 0;
-    padding: 7px;
     font-size: 14px;
     font-weight: 300;
-    width: 100%;
-    height: 100%;
 
     div {
       position: relative;
@@ -83,8 +82,6 @@
       }
 
       span {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: $titleTextGray;
       }
@@ -92,12 +89,11 @@
   }
 
   .navBtnContainer {
-    margin: 0 0 0 auto;
+    margin-left: auto;
   }
 
   .navBtns {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
     width: 222px;

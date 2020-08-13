@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../../Styles/reset.scss";
-import "../../../Styles/common.scss";
 import "./Login.scss";
 
 class Login extends React.Component {
@@ -14,48 +12,63 @@ class Login extends React.Component {
   }
   goToMain = () => {
     this.props.history.push("/main-seob");
-    console.log(`ID : ${this.state.account}`);
-    console.log(`PW : ${this.state.password}`);
   };
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleClick = (e) => {
+    e.preventDefault();
+    fetch("http://10.58.3.51:8000/user/login", {
+      method: "POST",
+      body: JSON.stringify({
+        phone_number: this.state.account,
+        password: this.state.password,
+      }),
+    })
+      .then((res) => res.json()) // JSON body => JS
+      .then((res) => sessionStorage.setItem("access_token", res.access_token));
+  };
+
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
   };
 
   render() {
+    const screenshots = [
+      "https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg",
+      "https://www.instagram.com/static/images/homepage/screenshot2-2x.jpg/177140221987.jpg",
+      "https://www.instagram.com/static/images/homepage/screenshot3-2x.jpg/ff2c097a681e.jpg",
+      "https://www.instagram.com/static/images/homepage/screenshot4-2x.jpg/b27a108592d8.jpg",
+      "https://www.instagram.com/static/images/homepage/screenshot5-2x.jpg/5e04169b9308.jpg",
+    ];
+    const { account, password } = this.state;
+
+    const footerObj = {
+      about: "https://about.instagram.com/",
+      help: "https://help.instagram.com/",
+      press: "https://about.instagram.com/blog/",
+      api: "https://www.instagram.com/developer/",
+      jobs: "https://www.instagram.com/about/jobs/",
+      privacy: "https://help.instagram.com/519522125107875",
+      terms: "https://help.instagram.com/581066165581870",
+      locations: "https://www.instagram.com/explore/locations/",
+      "top accounts": "https://www.instagram.com/directory/profiles/",
+      hashtags: "https://www.instagram.com/directory/hashtags/",
+      language: "#",
+    };
     return (
       <div className="Login">
         <article>
           <div className="leftContainer">
             <div className="phoneFrame">
               <div className="imagesInPhone">
-                <img
-                  alt="innerImage1"
-                  src="https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg"
-                />
-                <img
-                  alt="innerImage2"
-                  src="https://www.instagram.com/static/images/homepage/screenshot2-2x.jpg/177140221987.jpg"
-                />
-                <img
-                  alt="innerImage3"
-                  src="https://www.instagram.com/static/images/homepage/screenshot3-2x.jpg/ff2c097a681e.jpg"
-                />
-                <img
-                  alt="innerImage4"
-                  src="https://www.instagram.com/static/images/homepage/screenshot4-2x.jpg/b27a108592d8.jpg"
-                />
-                <img
-                  alt="innerImage5"
-                  src="https://www.instagram.com/static/images/homepage/screenshot5-2x.jpg/5e04169b9308.jpg"
-                />
+                {screenshots.map((screenshotSrc, idx) => (
+                  <img key={idx} alt={`screensho${idx}`} src={screenshotSrc} />
+                ))}
               </div>
             </div>
           </div>
           <div className="rightContainer">
             <div className="logInWrapper">
               <h1 className="instaLogo">Instagram</h1>
-              {/* <img alt="Instagram logo" src="images/logo_text.png" /> */}
               <div className="logInInputsContainer">
                 <form>
                   <div className="logInInputs" onChange={this.handleChange}>
@@ -71,22 +84,20 @@ class Login extends React.Component {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      // value={this.state.password}
+                      // value={password}
                     />
                     <button
                       className={
-                        this.state.account.includes("@") &&
-                        this.state.password.length > 5
+                        account.includes("@") && password.length > 5
                           ? "logInBtnActive"
                           : "logInBtn"
                       }
                       disabled={
-                        this.state.account.includes("@") &&
-                        this.state.password.length > 5
+                        account.includes("@") && password.length > 5
                           ? false
                           : true
                       }
-                      onClick={this.goToMain}
+                      onClick={(this.handleClick, this.goToMain)}
                     >
                       Log In
                     </button>
@@ -135,39 +146,13 @@ class Login extends React.Component {
         <footer>
           <nav className="navBottom">
             <ul>
-              <li>
-                <a href="https://about.instagram.com/">about</a>
-              </li>
-              <li>
-                <a href="/">help</a>
-              </li>
-              <li>
-                <a href="/">press</a>
-              </li>
-              <li>
-                <a href="/">api</a>
-              </li>
-              <li>
-                <a href="/">jobs</a>
-              </li>
-              <li>
-                <a href="/">privacy</a>
-              </li>
-              <li>
-                <a href="/">terms</a>
-              </li>
-              <li>
-                <a href="/">locations</a>
-              </li>
-              <li>
-                <a href="/">top accounts</a>
-              </li>
-              <li>
-                <a href="/">hashtags</a>
-              </li>
-              <li>
-                <a href="/">language</a>
-              </li>
+              {Object.keys(footerObj).map((key, idx) => (
+                <li>
+                  <a key={idx} href={footerObj[key]}>
+                    {key}
+                  </a>
+                </li>
+              ))}
             </ul>
             <span>© 2020 INSTAGRAM FROM FACEBOOK</span>
           </nav>

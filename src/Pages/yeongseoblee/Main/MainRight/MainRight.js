@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 import Suggestion from "./Suggestion";
-import "../../../../Styles/reset.scss";
-import "../../../../Styles/common.scss";
 import "./MainRight.scss";
 
 class MainRight extends Component {
   render() {
+    const footerObj = {
+      About: "https://about.instagram.com/",
+      Help: "https://help.instagram.com/",
+      Press: "https://about.instagram.com/blog/",
+      API: "https://www.instagram.com/developer/",
+      Jobs: "https://www.instagram.com/about/jobs/",
+      Privacy: "https://help.instagram.com/519522125107875",
+      Terms: "https://help.instagram.com/581066165581870",
+      Locations: "https://www.instagram.com/explore/locations/",
+      "Top Accounts": "https://www.instagram.com/directory/profiles/",
+      Hashtags: "https://www.instagram.com/directory/hashtags/",
+      Language: "#",
+    };
+
     return (
       <div className="MainRight">
         <div className="divForSticky">
@@ -43,39 +55,13 @@ class MainRight extends Component {
           <div className="sideFooter">
             <nav className="sideNavBar">
               <ul>
-                <li>
-                  <a href="/">About</a>
-                </li>
-                <li>
-                  <a href="/">Help</a>
-                </li>
-                <li>
-                  <a href="/">Press</a>
-                </li>
-                <li>
-                  <a href="/">API</a>
-                </li>
-                <li>
-                  <a href="/">Jobs</a>
-                </li>
-                <li>
-                  <a href="/">Privacy</a>
-                </li>
-                <li>
-                  <a href="/">Terms</a>
-                </li>
-                <li>
-                  <a href="/">Locations</a>
-                </li>
-                <li>
-                  <a href="/">Top Accounts</a>
-                </li>
-                <li>
-                  <a href="/">Hashtags</a>
-                </li>
-                <li>
-                  <a href="/">Language</a>
-                </li>
+                {Object.keys(footerObj).map((key, idx) => (
+                  <li>
+                    <a key={idx} href={footerObj[key]}>
+                      {key}
+                    </a>
+                  </li>
+                ))}
               </ul>
               <span>© 2020 INSTAGRAM FROM FACEBOOK</span>
             </nav>

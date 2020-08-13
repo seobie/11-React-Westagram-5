@@ -1,5 +1,7 @@
+@import "../../../../Styles/common.scss";
+
 .Story {
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid $borderColor;
   border-radius: 3px;
   background-color: white;
   width: 100%;
@@ -17,7 +19,6 @@
     ul {
       position: relative;
       display: flex;
-      flex-direction: row;
       height: 100%;
 
       .epmtyItem {
@@ -58,28 +59,28 @@
     cursor: pointer;
     width: 64px;
     height: 64px;
-  }
 
-  .storyBtn {
-    padding: 0;
-  }
+    .storyBtn {
+      padding: 0;
 
-  .storyBtn img {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1px solid rgb(219, 219, 219);
-  }
+      img {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 1px solid $borderColor;
+      }
+    }
 
-  .storyId {
-    position: relative;
-    top: 66px;
-    font-size: 12px;
-    max-width: 74px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    .storyId {
+      position: relative;
+      top: 66px;
+      font-size: 12px;
+      max-width: 74px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 }

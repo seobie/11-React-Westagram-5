@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "../../../../Styles/reset.scss";
-import "../../../../Styles/common.scss";
 import "./Suggestion.scss";
 
 class Suggestion extends Component {

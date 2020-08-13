@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import CommentItem from "./CommentItem";
-import "../../../../Styles/reset.scss";
-import "../../../../Styles/common.scss";
 import "./Feed.scss";
 
 class Feed extends Component {
@@ -25,13 +23,12 @@ class Feed extends Component {
   };
 
   appendListItem = () => {
-    let arr = this.state.commentArray;
-    arr.push({ cmt: this.state.comment });
+    const { commentArray, comment } = this.state;
+    commentArray.push({ cmt: comment });
     this.setState({
-      commentArray: arr,
+      commentArray,
       comment: "",
     });
-    this.ref.value = "";
   };
 
   clickLike = () => {
@@ -41,19 +38,30 @@ class Feed extends Component {
   };
 
   render() {
+    const {
+      author,
+      authorPic,
+      location,
+      feedImg,
+      details,
+      friendName,
+      likedNum,
+      numComments,
+      passedTime,
+    } = this.props.feedObj;
+
+    const { clicked, commentArray, comment } = this.state;
+    const { clickLike, appendListItem, handleEnter, handleChange } = this;
     return (
       <article className="Feed">
         <header className="uploader">
           <div className="headerProfilePic">
-            <img
-              alt="joeyunlee's profile picture"
-              src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/61039677_325768861657657_664942833857200128_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=8yxlPFRdtTwAX-vW7vC&oh=c1e6cecaa984ed33654acbf9da987329&oe=5F4FB426"
-            />
+            <img alt={`${author}'s profile picture`} src={authorPic} />
           </div>
           <div className="headerUserName">
             <div>
-              joeyunlee
-              <span>somewhere cool</span>
+              {author}
+              <span>{location}</span>
             </div>
             <button className="moreBtn">
               <div className="moreBtnDiv">
@@ -91,28 +99,25 @@ class Feed extends Component {
           </div>
         </header>
         <div className="contents">
-          <img
-            alt="user_name's feed"
-            src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/75491419_2590257414631838_8252980959796004155_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=B4Pxemwn7_MAX97vKyj&oh=1b2545719f2050ab13d683bedcdcf5eb&oe=5F4E85F1"
-          />
+          <img alt={`${author}'s feed`} src={feedImg} />
         </div>
         <div className="contentsBottomContainer">
           <div className="icons">
-            <span className="likeBtn" onClick={this.clickLike}>
+            <span className="likeBtn" onClick={clickLike}>
               <button>
                 <div>
                   <span className="likeBtnSpan"></span>
                   <svg
                     aria-label="Like"
-                    className="likeBtnBlack"
-                    fill={this.state.clicked ? "#ed4956" : "#262626"}
+                    className={clicked ? "likeBtnRed" : "likeBtnBlack"}
+                    fill={clicked ? "#ed4956" : "#262626"}
                     height="24"
                     viewBox="0 0 48 48"
                     width="24"
                   >
                     <path
                       d={
-                        this.state.clicked
+                        clicked
                           ? "M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"
                           : "M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"
                       }
@@ -170,24 +175,24 @@ class Feed extends Component {
           <div className="likes">
             <div className="friendsPhoto"></div>
             <div>
-              Liked by
+              {`Liked by `}
               <span>
                 <a className="userNameATags" href="/">
-                  User's Friend Name Here
+                  {friendName}
                 </a>
               </span>
-              and
-              <button className="othersBtn">9,999 others</button>
+              {` and`}
+              <button className="othersBtn">{`${likedNum} others`}</button>
             </div>
           </div>
           <div className="description">
             <div className="descriptionUserName">
               <a className="userNameATags" href="/">
-                user_name
+                {author}
               </a>
             </div>
             &nbsp;
-            <div className="descriptionDetails">details</div>
+            <div className="descriptionDetails">{details}</div>
             <span className="moreDots">
               ...&nbsp;
               <button className="descriptionMore">more</button>
@@ -196,37 +201,34 @@ class Feed extends Component {
           <div className="comments">
             <div className="viewAllComments">
               <a href="/">
-                View All
-                <span className="numOfAllComments">9,999,999</span>
-                comments
+                {`View All `}
+                <span className="numOfAllComments">{numComments}</span>
+                {` comments`}
               </a>
             </div>
             <ul className="commentList">
-              {this.state.commentArray.map((el, idx) => (
+              {commentArray.map((el, idx) => (
                 <CommentItem key={idx} valueFromFeed={el.cmt} />
               ))}
             </ul>
           </div>
           <div className="passedTime">
-            <a href="/">20 hours ago</a>
+            <a href="/">{`${passedTime} hours ago`}</a>
           </div>
           <section className="commentInput">
             <div>
               <textarea
-                ref={(ref) => (this.ref = ref)}
                 className="commentTextArea"
                 placeholder="Add a comment..."
                 style={{ height: "18px" }}
-                onChange={this.handleChange}
-                onKeyUp={this.handleEnter}
-                value={this.state.comment}
+                onChange={handleChange}
+                onKeyUp={handleEnter}
+                value={comment}
               ></textarea>
               <button
-                className={
-                  this.state.comment ? "commentPostBtnActive" : "comemntPostBtn"
-                }
-                disabled={this.state.comment ? false : true}
-                onClick={this.appendListItem}
+                className={comment ? "commentPostBtnActive" : "commentPostBtn"}
+                disabled={comment ? false : true}
+                onClick={appendListItem}
               >
                 Post
               </button>
