@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
-import "./Main.scss";
 import "./Article.scss";
 
 class Article extends Component {
@@ -73,7 +72,7 @@ class Article extends Component {
             <div className="boldTextImg"></div>
             <b>aineworld</b>님 외 <b>10</b>명이 좋아합니다
           </div>
-          <ul className="mainText marginBt">
+          <ul className="Comment marginBt">
             <li className="nameBold">canon_mj</li>
             <li className="moreText">
               보틀케이크 큰사이즈2개,작은사이즈15개 나왔어요!예약판매는
@@ -81,8 +80,8 @@ class Article extends Component {
               답장 못 드리고 있어요 작업이 끝난 저녁쯤 순차적으로 답장 드릴게요!
             </li>
             <li className="moreBtn">더 보기</li>
-            {this.state.sliceText.map((e, index) => {
-              return <Comment commentData={e} key={index} />;
+            {this.state.sliceText.map((el, index) => {
+              return <Comment commentData={el} key={index} />;
             })}
           </ul>
         </div>

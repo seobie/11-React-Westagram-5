@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Login.scss";
-import "../../../Styles/common.scss";
 
 class Login extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class Login extends Component {
     this.setState({ passwordValue: e.target.value });
   };
 
-  locationEvent = (e) => {
+  locationEvent = () => {
     fetch("http://10.58.2.217:8000/user/sign-in", {
       method: "POST",
       body: JSON.stringify({
@@ -36,7 +35,7 @@ class Login extends Component {
     return (
       <div className="Login">
         <div className="wrap">
-          <main className="mainBox">
+          <main className="main">
             <div className="logo">
               <img alt="logo" src="/images/hyojeunglee/logo_text.png" />
             </div>

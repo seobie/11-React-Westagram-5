@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import Nav from "../../../Components/Nav/Nav";
-import Article from "./Article";
-import Aside from "./Aside";
-import "../../../Styles/common.scss";
+import Article from './Article';
+import Aside from './Aside';
 import "./Main.scss";
+
 
 class Main extends Component {
   render() {
     return (
-      <div className="Main">
+      <>
         <Nav />
-        <div className="mainBox">
+        <div className="Main">
           <Article />
           <Aside />
         </div>
-      </div>
+      </>
     );
   }
 }

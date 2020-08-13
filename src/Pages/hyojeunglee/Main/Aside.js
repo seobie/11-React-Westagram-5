@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import "./Main.scss";
 import "./Aside.scss";
 
 class Aside extends Component {
   render() {
     return (
       <aside className="Aside">
-        <div className="profile">
-          <div className="profileImg"></div>
-          <ul className="profileText">
-            <li className="profileId">ovv__0703</li>
-            <li className="profileName">ㅎㅈ</li>
+        <div className="myProfile">
+          <div className="myProfileImg"></div>
+          <ul className="myProfileText">
+            <li className="myProfileId">ovv__0703</li>
+            <li className="myProfileName">ㅎㅈ</li>
           </ul>
         </div>
         <div className="storyBox">
@@ -18,32 +17,32 @@ class Aside extends Component {
             <li className="storyBoxTitle">스토리</li>
             <li>모두 보기</li>
           </ul>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">s_yeong_ee</li>
-              <li className="profileTime">16분 전</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">s_yeong_ee</li>
+              <li className="userProfileTime">16분 전</li>
             </ul>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">epelcuration</li>
-              <li className="profileTime">3시간 전</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">epelcuration</li>
+              <li className="userProfileTime">3시간 전</li>
             </ul>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">luckysukyw</li>
-              <li className="profileTime">20시간 전</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">luckysukyw</li>
+              <li className="userProfileTime">20시간 전</li>
             </ul>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">_seul.ki</li>
-              <li className="profileTime">36시간 전</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">_seul.ki</li>
+              <li className="userProfileTime">36시간 전</li>
             </ul>
           </div>
         </div>
@@ -52,34 +51,34 @@ class Aside extends Component {
             <li className="issueBoxTitle">회원님을 위한 추천</li>
             <li>모두 보기</li>
           </ul>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">s_yeong_ee</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">s_yeong_ee</li>
               <li className="followText">curationd외 2명이 알고있습니다.</li>
             </ul>
             <div className="follow">팔로우</div>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">epelcuration</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">epelcuration</li>
               <li className="followText">ckysud님 외 4명이 알고있습니다.</li>
             </ul>
             <div className="follow">팔로우</div>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">luckysukyw</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">luckysukyw</li>
               <li className="followText">luc님 외 4명이 알고있습니다.</li>
             </ul>
             <div className="follow">팔로우</div>
           </div>
-          <div className="profile2">
-            <div className="profileImg2"></div>
-            <ul className="profileText2">
-              <li className="profileId2">_seul.ki</li>
+          <div className="userProfile">
+            <div className="userProfileImg"></div>
+            <ul className="userProfileText">
+              <li className="userProfileId">_seul.ki</li>
               <li className="followText">seul___님 외 4명이 알고있습니다.</li>
             </ul>
             <div className="follow">팔로우</div>
