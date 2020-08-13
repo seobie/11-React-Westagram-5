@@ -72,7 +72,7 @@ class Article extends Component {
             <div className="boldTextImg"></div>
             <b>aineworld</b>님 외 <b>10</b>명이 좋아합니다
           </div>
-          <ul className="Comment marginBt">
+          <ul className="comment marginBt">
             <li className="nameBold">canon_mj</li>
             <li className="moreText">
               보틀케이크 큰사이즈2개,작은사이즈15개 나왔어요!예약판매는
