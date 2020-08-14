@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './Login.scss';
 import { withRouter } from 'react-router-dom';
-
+import './Login.scss';
 
 class Login extends Component {
     constructor() {
@@ -11,9 +10,11 @@ class Login extends Component {
             inputPwd: '',
         };
     }
+
     loginId = (e) => {
         this.setState({ inputId: e.target.value })
     }
+
     loginPwd = (e) => {
         this.setState({ inputPwd: e.target.value })
     }
@@ -27,17 +28,17 @@ class Login extends Component {
             })
         })
             .then(res => res.json())
-            .then(res => console.log(res));
-
+            .then(res => this.setState({ accessToken: res }));
     };
+
     goToMain = () => {
         this.props.history.push('/Main-sangwon');
     }
+
     render() {
-        console.log(this.state.inputId)
         return (
             <section className="LoginWrapper">
-                <main>
+                <main className="mainContainer">
                     <article>
                         <div className="phoneImgBox">
                             <img alt="phone IMG" src="https://images.squarespace-cdn.com/content/v1/593686695016e1e8535b639b/1524753684115-PXHJRGOBF9V1LHV01S5P/ke17ZwdGBToddI8pDm48kGeNtXjnSVE0FC98ofHjoQx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVURxIstYj4VcQ3u4G8psS8p19-2HRX2fy4mVTF2-S9JlPRhrjbf-ufqwsSWgrw9rg/06_8508-e1507627553782.jpg?format=2500w" />

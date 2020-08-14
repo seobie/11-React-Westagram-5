@@ -4,7 +4,7 @@ import './Sidebox.scss'
 class SideBox extends Component {
     render() {
         return (
-            <div className="mainWapper">
+            <div className="SideBox">
                 <div className="sidebarBox">
                     <div className="sidebarContant">
                         <img alt="프로필이미지"
@@ -74,7 +74,7 @@ class SideBox extends Component {
                     </ul>
                     <div className="infoFoobar infoBarLists">
                         <div>
-                            <ul className="infoBarList1">
+                            <ul className="infoFristList">
                                 <li className="infoBarList">소개</li>
                                 <li className="infoBarList">도움말</li>
                                 <li className="infoBarList">홍보센터</li>
@@ -84,7 +84,7 @@ class SideBox extends Component {
                             </ul>
                         </div>
                         <div>
-                            <ul className="infoBarList2">
+                            <ul className="infoSecondList">
                                 <li className="infoBarList">약관</li>
                                 <li className="infoBarList">위치</li>
                                 <li className="infoBarList">인기계정</li>
@@ -101,5 +101,4 @@ class SideBox extends Component {
         );
     }
 }
-
 export default SideBox;

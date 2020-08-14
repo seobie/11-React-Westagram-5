@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import SideBox from './Sidebox';
 import Feed from './Feed';
 import Nav from '../../../Components/Nav/Nav'
-import '../../../Components/Nav/Nav.scss'
 import './Main.scss'
-
 
 class Main extends Component {
     render() {

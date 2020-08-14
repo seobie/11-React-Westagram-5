@@ -1,107 +1,127 @@
-    main {
+.feedContainer {
+    width: 614px;
+    height: 614px;
+    border: 1px solid rgb(219, 219, 219);
+
+    .feedHeader {
+        width: 614px;
+        height: 64px;
         position: relative;
-        top: 50px;
-        display: flex;
-        justify-content: center;
-
-        section {
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            margin: 0 auto;
-            max-width: 935px;
-            height: 1499px;
-        }
-
-        .sectionBox {
-            display: flex;
-            flex-direction: row;
-            margin-top: 30px;
-        }
-
-        .feedContainer {
-            width: 614px;
-            height: 614px;
-            border: 1px solid rgb(219, 219, 219);
-
-            .feedHeader {
-                width: 614px;
-                height: 64px;
-                position: relative;
-
-                img {
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    margin: 0 auto;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 30px;
-                }
-            }
-
-            .innerImg {
-                margin-top: 30px;
-                position: absolute;
-                margin-left: 35px;
-                width: 12px;
-                height: 10px;
-                border: 1px solid white;
-                border-radius: 10px;
-                color: white;
-                background-color: red;
-            }
-
-            .innerImgText {
-                margin: 0 auto;
-                font-weight: bold;
-                padding: 5px;
-                width: 500px;
-                height: 10px;
-                font-size: 14px;
-            }
-
-            .innerLocation {
-                margin-left: 55px;
-                padding: 3px;
-                font-size: 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-            }
-        }
-
-        .feedImgBox {
-            position: relative;
-            width: 614px;
-            height: 614px;
-
-            img {
-                width: 614px;
-                height: 614px;
-                padding: 0;
-            }
-        }
-
-        .feedLikeImg {
-            margin-left: 10px;
-            position: relative;
-        }
-
-        .lists {
-            margin-left: 5px;
-        }
-
-        textarea {
-            width: 450px;
-            height: 30px;
-            border: 0;
-            outline: none;
-            resize: none;
-        }
 
         img {
-            width: 22px;
-            height: 22px;
-            padding: 5px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
         }
     }
+
+    .commentLine {
+        border: 1px solid rgb(219, 219, 219);
+        position: relative;
+
+        img {
+            margin-left: 5px;
+            width: 22px;
+            height: 22px;
+        }
+
+        .moveBookMark {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    .innerImg {
+        margin-top: 30px;
+        position: absolute;
+        margin-left: 35px;
+        width: 12px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        color: white;
+        background-color: red;
+    }
+
+    .innerImgText {
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 6px 0px 10px 0px;
+        width: 500px;
+        height: 10px;
+        font-size: 14px;
+    }
+
+    .innerLocation {
+        margin-left: 55px;
+        padding: 3px;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    .feedImgBox {
+        position: relative;
+        width: 614px;
+        height: 614px;
+
+        img {
+            width: 612px;
+            height: 614px;
+            padding: 0;
+        }
+    }
+
+    .feedLikeImg {
+        margin-left: 10px;
+        position: relative;
+    }
+
+    .lists {
+        margin-left: 5px;
+    }
+
+    .iconHeartSmall {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        padding: 5px;
+        line-height: 22px;
+        right: 10px;
+    }
+
+    .commentList>div>button {
+        position: absolute;
+        right: 30px;
+        color: rgb(0, 149, 246);
+    }
+
+    .commentsBox {
+        display: flex;
+        position: relative;
+        border: 1px solid #c7c7c7;
+        height: 40px;
+        margin: 4px 0px 0px;
+
+        input {
+            margin: 10px 0px 0px 10px;
+            width: 500px;
+            outline: none;
+            border: none;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .submitButtonChange {
+            margin-left: 50px;
+        }
+
+        .submitButton {
+            margin-left: 50px;
+            color: rgb(53, 149, 246);
+        }
+    }
+}
