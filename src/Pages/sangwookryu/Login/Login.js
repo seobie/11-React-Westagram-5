@@ -1,6 +1,6 @@
 import React from "react";
-import "./Login.scss";
 import { withRouter } from "react-router-dom";
+import "./Login.scss";
 
 class Login extends React.Component {
   constructor() {
@@ -27,9 +27,7 @@ class Login extends React.Component {
         email: this.state.idValue,
         password: this.state.pwValue,
       }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
+    }).then((res) => res.json());
   };
 
   goToMain = () => {
@@ -64,7 +62,12 @@ class Login extends React.Component {
               className="login-button"
               onClick={this.goToMain}
               name="loginBtn"
-              disabled={!enabled}
+              disabled={
+                this.state.idValue.includes("@") &&
+                this.state.pwValue.length > 4
+                  ? false
+                  : true
+              }
             >
               로그인
             </button>

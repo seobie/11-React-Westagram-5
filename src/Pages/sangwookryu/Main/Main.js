@@ -1,8 +1,8 @@
 import React from "react";
-import "./Main.scss";
 import NavBar from "../../../Components/Nav/Nav";
 import Article from "./Article";
 import Aside from "./Aside";
+import "./Main.scss";
 
 class Main extends React.Component {
   render() {

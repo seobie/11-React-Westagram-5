@@ -1,7 +1,6 @@
 import React from "react";
-import Comment from "./Comment"
+import Comment from "./Comment";
 import "./Article.scss";
-
 
 class Article extends React.Component {
   constructor() {
@@ -87,9 +86,7 @@ class Article extends React.Component {
                   <a href="">#sun</a> <a href="">#portrait</a>
                   <ul className="viewer-box">
                     {this.state.arr.map((comment, index) => {
-                      return (
-                        <Comment commentqq={comment}/>
-                      );
+                      return <Comment commentqq={comment} />;
                     })}
                   </ul>
                 </div>
