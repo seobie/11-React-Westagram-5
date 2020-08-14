@@ -1,5 +1,4 @@
-a {
-  color: rgb(38,38,38);
+%a-shared {
   text-decoration: none;
   font-weight: 600;
 }
@@ -9,12 +8,13 @@ a {
   justify-content: center;
   margin: 0 35.5px;
   padding-top: 30px;
+
   .feedsStoryBox {
     width: 614px;
     height: 118px;
-    border: 1px solid rgb(219,219,219);
+    border: 1px solid rgb(219, 219, 219);
     border-radius: 3px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 16px 0;
     margin: 0 0 24px;
     overflow: scroll;
@@ -35,13 +35,13 @@ a {
     }
     .feedsStoryListId {
       font-size: 12px;
-      color: rgb(38,38,38);
+      color: rgb(38, 38, 38);
     }
   }
-  
+
   .feedsContents {
     width: 614px;
-    border: 1px solid rgb(219,219,219);
+    border: 1px solid rgb(219, 219, 219);
     border-radius: 3px;
     margin: 0 28px 60px 0;
     .feedsTop {
@@ -56,6 +56,10 @@ a {
         align-items: center;
         .feedsTopLeftMargin {
           margin-left: 20px;
+          a {
+            @extend %a-shared;
+            color: rgb(38, 38, 38);
+          }
           .feedsTopLocation {
             font-size: 12px;
           }
@@ -78,7 +82,7 @@ a {
       }
     }
     .replySection {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       .replyIconBar {
         width: 100%;
         height: 40px;
@@ -103,6 +107,10 @@ a {
         font-size: 14px;
         padding: 0 16px;
         margin: 0 0 8px;
+        a {
+          @extend %a-shared;
+          color: rgb(38, 38, 38);
+        }
       }
       .replyLikes img {
         width: 20px;
@@ -110,20 +118,24 @@ a {
         border-radius: 50%;
         margin-right: 2px;
       }
-      .replyListBox{
+      .replyListBox {
         padding: 0 16px;
         .replyContents {
           margin-bottom: 4px;
         }
         .replyContents a {
+          @extend %a-shared;
+          color: rgb(38, 38, 38);
           margin-right: 2px;
         }
         .replyNumber {
           margin-bottom: 4px;
         }
         .replyNumber a {
+          @extend %a-shared;
           font-size: 14px;
-          color: rgb(142,142,142)
+          font-weight: normal;
+          color: rgb(142, 142, 142);
         }
         .reply {
           position: relative;
@@ -146,13 +158,13 @@ a {
         width: 100%;
         height: 19px;
         font-size: 10px;
-        color: rgb(142,142,142);
+        color: rgb(142, 142, 142);
         padding: 0 16px;
       }
       .replyTypeBox {
         width: 100%;
-        border-top: 1px solid rgb(219,219,219);
-        background: #FFFFFF;
+        border-top: 1px solid rgb(219, 219, 219);
+        background: #ffffff;
         margin-top: 4px;
         padding: 0 16px;
         .replyTypeLine {
@@ -168,17 +180,17 @@ a {
         outline: none;
       }
       .replyBtnActive {
-        color: rgba(0,149,246,1);
+        color: rgba(0, 149, 246, 1);
       }
       .replyBtnDisabled {
-        color: rgba(0,149,246,.3);
+        color: rgba(0, 149, 246, 0.3);
       }
     }
   }
   .feedsContents img {
     width: 100%;
   }
-  
+
   .mainRight {
     width: 293px;
     height: 689px;
@@ -199,16 +211,20 @@ a {
         margin-left: 20px;
         .mainRightName {
           margin: 0 0 2px;
+          a {
+            @extend %a-shared;
+            color: rgb(38, 38, 38);
+          }
         }
         .mainRightNick {
-          color: rgb(142,142,142);
+          color: rgb(142, 142, 142);
           font-size: 12px;
         }
       }
     }
   }
-  
-  .recommendContainer{
+
+  .recommendContainer {
     width: 325px;
     margin: 0 0 12px -16px;
     .recommendTop {
@@ -218,8 +234,14 @@ a {
       padding: 4px 16px;
       margin: 12px 0 0;
       .recommendTopRight {
-        color: rgb(142,142,142);
+        color: rgb(142, 142, 142);
         font-size: 14px;
+      }
+      a {
+        @extend %a-shared;
+        color: rgb(38, 38, 38);
+        font-size: 12px;
+        line-height: 14px;
       }
     }
     .recommendListBox {
@@ -237,14 +259,14 @@ a {
         .recommendListRight {
           display: flex;
           .recommendListName a {
-            color: rgb(38,38,38);
+            color: rgb(38, 38, 38);
             text-decoration: none;
             font-weight: 600;
             padding-left: 5px;
             margin-left: -5px;
           }
           .recommendListInfo {
-            color: rgb(142,142,142);
+            color: rgb(142, 142, 142);
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
@@ -253,7 +275,7 @@ a {
         }
       }
       .recommendList button {
-        color: rgb(0,149,246);
+        color: rgb(0, 149, 246);
         font-weight: 600;
       }
     }
@@ -267,8 +289,8 @@ a {
       margin: 0 0 20px;
     }
     .extraInfo ul li::after {
-      content: '\00B7';
-      color: rgb(199,199,199);
+      content: "\00B7";
+      color: rgb(199, 199, 199);
       margin: 0;
     }
     .extraInfo ul li {
@@ -278,19 +300,15 @@ a {
     }
     .extraInfo ul li a {
       text-decoration: none;
-      color: rgb(199,199,199);
+      color: rgb(199, 199, 199);
     }
     .extraInfo ul li a:visited {
       text-decoration: none;
     }
     .extraInfo span {
       font-size: 11px;
-      letter-spacing: .5px;
-      color: rgb(199,199,199);
+      letter-spacing: 0.5px;
+      color: rgb(199, 199, 199);
     }
   }
-  
- 
-  
-  
 }
